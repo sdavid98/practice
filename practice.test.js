@@ -5,7 +5,9 @@ const {
     getUniqueCharsSorted, 
     add, 
     isEqualObjects, 
-    groupCalls
+    groupCalls,
+    chunk,
+    intersection
 } =  require("./practice");
 
 describe("getUniqueNumber", () => {
@@ -39,6 +41,20 @@ describe("add", () => {
     test("should add the given numbers", () => {
         expect(add(3, 5)).toBe(8);
         expect(add(3)(7)).toBe(10);
+    })
+})
+
+describe("chunk", () => {
+    test("should chunk up the given array to the size of n", () => {
+        expect(chunk([0, 1, 2, 3, 4, 5, 6, 7], 3)).toEqual([[0, 1, 2], [3, 4, 5], [6, 7]]);
+        expect(chunk([0, 1, 2, 3, 4, 5, 6, 7], 2)).toEqual([[0, 1], [2, 3], [4, 5], [6, 7]]);
+    })
+})
+
+describe("intersection", () => {
+    test("should return only the common values from all arrays", () => {
+        expect(chunk([0, 1, 2, 3], [3], [])).toEqual([]);
+        expect(chunk([2, 3, 4], [2, 7, 4], [4, 5, 1])).toEqual([4]);
     })
 })
 

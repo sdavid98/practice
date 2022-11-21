@@ -81,6 +81,20 @@ const calls = [{
   
 const groupCalls = (calls) => {}
 
+// Create a function that accepts an array and a number and return an array of arrays, with the size of the given number
+// Example usage
+// chunk([1, 2, 3, 4, 5], 2) === [[1, 2], [3, 4], [5]]
+
+const chunk = (arr, chunkSize) => {}
+
+// Given 2 or more arrays, return an array containing all the elements that all arrays contain
+// Example usage
+// intersection([1, 2], [3, 2, 5], [0, 1, 3, 2]) === [2]
+
+const intersection = (...arrs) => {}
+
+// more array exercises: https://www.w3resource.com/javascript-exercises/javascript-array-exercises.php
+
 module.exports = {
   getUniqueNumber,
   getMedian,
@@ -89,5 +103,7 @@ module.exports = {
   add,
   isEqualObjects,
   calls,
-  groupCalls
+  groupCalls,
+  chunk,
+  intersection
 }
